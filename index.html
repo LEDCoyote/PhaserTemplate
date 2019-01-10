@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title of the Game!</title>
+  
+  <!-- load phaser file -->
+  <script src="scripts/phaser.min.js"></script>
+
+  <!-- game scripts -->
+  <script src="scripts/Globals.js"></script>
+  <script src="scripts/Preload.js"></script>
+  <script src="scripts/Scene.js"></script>
+
+</head>
+<body>
+  <script type="text/javascript">
+
+    // on load, create game config
+    let config = {
+      type: Phaser.AUTO,
+      width: w,
+      height: h,
+      pixelArt: true,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          gravity: { y: g },
+          debug: false,
+        },
+      },
+      scene: [PreloadScene, SceneScene]
+    };
+
+    // instantiate the game from the config
+    let game = new Phaser.Game(config);
+
+  </script>
+</body>
+</html>
