@@ -8,8 +8,10 @@
 
   <!-- game scripts -->
   <script src="scripts/Globals.js"></script>
+  <script src="scripts/GameObjects.js"></script>
   <script src="scripts/Preload.js"></script>
-  <script src="scripts/Scene.js"></script>
+  <script src="scripts/MenuScene.js"></script>
+  <script src="scripts/GameplayScene.js"></script>
 
 </head>
 <body>
@@ -28,7 +30,7 @@
           debug: false,
         },
       },
-      scene: [PreloadScene, SceneScene]
+      scene: [PreloadScene, MenuScene, GameplayScene]
     };
 
     // instantiate the game from the config

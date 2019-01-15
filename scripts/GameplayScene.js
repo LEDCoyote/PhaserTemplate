@@ -1,17 +1,14 @@
 'use strict';
-// Template for Scene Scene
-let SceneScene = new Phaser.Class({
+// Template for Gameplay Scene
+let GameplayScene = new Phaser.Class({
   Extends: Phaser.Scene,
   
   initialize: function () 
   {
-    Phaser.Scene.call(this, { key: 'sceneScene' });
+    Phaser.Scene.call(this, { key: 'gameplayScene' });
   },
 
-  preload: function () 
-  {
-    
-  },
+  preload: function () { },
 
   create: function () 
   {
