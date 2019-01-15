@@ -54,10 +54,6 @@ let PreloadScene = new Phaser.Class({
     //////////////////////////////////////////////////////////////
     //~~~~~~~~~~~~~~~~~~~~ LOAD ASSETS HERE ~~~~~~~~~~~~~~~~~~~~//
     
-    
-    this.load.image('logo','gfx/Coyote_logo.png');
-    
-    
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
     //////////////////////////////////////////////////////////////
     
@@ -88,33 +84,12 @@ let PreloadScene = new Phaser.Class({
 
   create: function () 
   {
-    // after loading assets, display logo
-    this.logo = this.add.image(400,300,'logo');
     
-    // logo fades after 1.5 s
-    this.doFade = false;
-    this.time.delayedCall(1500,
-      function() {
-        this.doFade = true;
-      },
-      [],
-      this);
   },
 
   update: function () 
   {
-    let a = this.logo.alpha;
-    if (a <= 0)
-    {
-      // stop fade, kick off initial scene
-      this.doFade = false;
-      this.scene.start('menuScene');
-    }
-    
-    // fade logo
-    if (this.doFade)
-    {
-      this.logo.setAlpha(a - 0.01);
-    }
+    // kick off initial scene
+    this.scene.start('menuScene');
   },
 });
