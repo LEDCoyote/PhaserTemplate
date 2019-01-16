@@ -1,25 +1,24 @@
 'use strict';
 // Template for Scene Scene
-let SceneScene = new Phaser.Class({
-  Extends: Phaser.Scene,
+class SceneScene extends Phaser.Scene {
   
-  initialize: function () 
+  constructor () 
   {
-    Phaser.Scene.call(this, { key: 'sceneScene' });
-  },
+    super('sceneScene');
+  }
 
-  preload: function () 
+  preload () 
   {
     
-  },
+  }
 
-  create: function () 
+  create () 
   {
     
-  },
+  }
 
-  update: function () 
+  update () 
   {
     
-  },
-});
+  }
+}

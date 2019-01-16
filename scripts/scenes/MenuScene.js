@@ -1,16 +1,15 @@
 'use strict';
 // Template for Menu Scene
-let MenuScene = new Phaser.Class({
-  Extends: Phaser.Scene,
+class MenuScene extends Phaser.Scene {
   
-  initialize: function () 
+  constructor () 
   {
-    Phaser.Scene.call(this, { key: 'menuScene' });
-  },
+    super('menuScene');
+  }
 
-  preload: function () { },
+  preload () { }
 
-  create: function () 
+  create () 
   {
     this.stateWaitForInput = true;
     this.messageText = this.add.text(w/2, h/2, "Title of the Game!\nPress <space> to start.",
@@ -19,13 +18,13 @@ let MenuScene = new Phaser.Class({
     this.input.keyboard.on('keydown_SPACE', function() {
       this.stateWaitForInput = false;
     },this);
-  },
+  }
 
-  update: function () 
+  update () 
   {
     if (!this.stateWaitForInput)
     {
       this.scene.start('gameplayScene');
     }
   }
-});
+}

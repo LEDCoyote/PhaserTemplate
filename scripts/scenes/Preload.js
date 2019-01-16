@@ -1,14 +1,13 @@
 'use strict';
 // Template for Preload Scene
-let PreloadScene = new Phaser.Class({
-  Extends: Phaser.Scene,
+class PreloadScene extends Phaser.Scene {
   
-  initialize: function () 
+  constructor () 
   {
-    Phaser.Scene.call(this, { key: 'preloadScene' });
-  },
+    super('preloadScene');
+  }
 
-  preload: function () 
+  preload () 
   {
     //// Progress Update Items ///////////
     let progressBar = this.add.graphics();
@@ -80,16 +79,16 @@ let PreloadScene = new Phaser.Class({
       percentText.destroy();
       assetText.destroy();
     });
-  },
+  }
 
-  create: function () 
+  create () 
   {
     
-  },
+  }
 
-  update: function () 
+  update () 
   {
     // kick off initial scene
     this.scene.start('menuScene');
-  },
-});
+  }
+}
