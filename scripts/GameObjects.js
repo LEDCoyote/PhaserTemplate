@@ -1,2 +1,0 @@
-// Objects for the game
-
